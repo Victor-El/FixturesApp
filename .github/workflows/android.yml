@@ -23,7 +23,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Set up ENV vars
-      run: touch app.properties && echo "DEV_API_BASE_URL=\"${{ secrets.API_DEBUG }}\"" > app.properties && cat app.properties && echo "PROD_API_BASE_URL=\"${{ secrets.API_DEBUG }}\"" >> wally.properties && cat app.properties  && echo "API_KEY=\"${{ secrets.API_KEY }}\"" >> app.properties && cat wally.properties
+      run: touch app.properties && echo "DEV_API_BASE_URL=\"${{ secrets.API_DEBUG }}\"" > app.properties && cat app.properties && echo "PROD_API_BASE_URL=\"${{ secrets.API_DEBUG }}\"" >> app.properties && cat app.properties  && echo "API_KEY=\"${{ secrets.API_KEY }}\"" >> app.properties && cat app.properties
     - name: Build with Gradle
       run: ./gradlew build
     - name: Run JVM unit tests
