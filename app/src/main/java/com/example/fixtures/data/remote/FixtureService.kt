@@ -1,6 +1,6 @@
-package com.example.fixtures.data
+package com.example.fixtures.data.remote
 
-import com.example.fixtures.data.dtos.Fixture
+import com.example.fixtures.data.remote.dtos.Fixture
 import retrofit2.http.GET
 
 interface FixtureService {

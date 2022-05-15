@@ -1,3 +1,3 @@
-package com.example.fixtures.data.dtos
+package com.example.fixtures.data.remote.dtos
 
 data class Team(val id: Int, val name: String)
