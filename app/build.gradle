@@ -29,6 +29,7 @@ android {
     }
 
     buildTypes {
+
         debug {
             buildConfigField("String", "BASE_API_URL", appProperties["DEV_API_BASE_URL"])
             buildConfigField("String", "API_KEY", appProperties["API_KEY"])
@@ -69,7 +70,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     implementation 'com.github.bumptech.glide:glide:4.13.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    kapt 'com.github.bumptech.glide:compiler:4.13.0'
 
     implementation "com.google.dagger:hilt-android:2.38.1"
     kapt "com.google.dagger:hilt-compiler:2.38.1"
