@@ -1,7 +1,7 @@
 package com.example.fixtures.data.remote.dtos
 
-data class Area(
-    val code: String,
-    val ensignUrl: String,
+data class CompetitionDto(
+    val area: AreaDto,
+    val id: Int,
     val name: String
 )

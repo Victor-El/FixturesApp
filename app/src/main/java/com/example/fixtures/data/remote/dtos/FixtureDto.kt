@@ -1,6 +1,6 @@
 package com.example.fixtures.data.remote.dtos
 
-data class Fixture(
+data class FixtureDto(
     val count: Int,
-    val matches: List<Match>
+    val matches: List<MatchDto>
 )

@@ -1,6 +1,6 @@
 package com.example.fixtures.data.remote.dtos
 
-data class Season(
+data class SeasonDto(
     val currentMatchday: Int,
     val endDate: String,
     val id: Int,
