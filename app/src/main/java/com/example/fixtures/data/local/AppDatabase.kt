@@ -1,12 +1,11 @@
 package com.example.fixtures.data.local
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
 import com.example.fixtures.DB_NAME
 import com.example.fixtures.data.local.entities.MatchEntity
 
+@TypeConverters(Converters::class)
 @Database(entities = [MatchEntity::class], version = 1)
 abstract class AppDatabase: RoomDatabase() {
 

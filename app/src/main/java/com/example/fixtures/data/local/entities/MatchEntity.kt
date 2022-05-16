@@ -7,11 +7,11 @@ import androidx.room.PrimaryKey
 @Entity
 data class MatchEntity(
     @Embedded
-    val awayTeam: TeamEntity,
+    val awayTeam: AwayTeamEntity,
     @Embedded
     val competition: CompetitionEntity,
     @Embedded
-    val homeTeam: TeamEntity,
+    val homeTeam: HomeTeamEntity,
     @PrimaryKey
     val id: Int,
     val lastUpdated: String,
