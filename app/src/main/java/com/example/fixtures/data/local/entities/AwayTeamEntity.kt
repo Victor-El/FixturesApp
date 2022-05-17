@@ -7,6 +7,4 @@ data class AwayTeamEntity(
     val id: Int,
     @ColumnInfo(name = "away_team_name")
     val name: String
-) {
-
-}
+)

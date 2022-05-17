@@ -16,6 +16,9 @@ interface FixturesDao {
     suspend fun deleteAll()
 
     @Query("SELECT * FROM matchentity")
-    fun getAll(): Flow<List<MatchEntity>>
+    fun observeAll(): Flow<List<MatchEntity>>
+
+    @Query("SELECT * FROM matchentity")
+    suspend fun getAll(): List<MatchEntity>
 
 }

@@ -1,4 +1,4 @@
-package com.example.fixtures.domain
+package com.example.fixtures.domain.mappers
 
 interface EntityMapper<Entity, DomainModel> {
 

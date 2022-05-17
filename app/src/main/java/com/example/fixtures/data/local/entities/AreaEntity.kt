@@ -5,13 +5,7 @@ import com.example.fixtures.domain.models.Area
 
 data class AreaEntity(
     val code: String,
-    val ensignUrl: String,
+    val ensignUrl: String?,
     @ColumnInfo(name = "area_name")
     val name: String
-) {
-    fun toDomainModel(): Area {
-        return Area(
-            code, ensignUrl, name
-        )
-    }
-}
+)
