@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/fixturesHomeFragment"
         android:name="com.example.fixtures.presentation.view.FixturesHomeFragment"
-        android:label="FixturesHomeFragment" />
+        android:label="FixturesHomeFragment" >
+        <action
+            android:id="@+id/action_fixturesHomeFragment_to_allFixturesFragment"
+            app:destination="@id/allFixturesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allFixturesFragment"
+        android:name="com.example.fixtures.presentation.view.AllFixturesFragment"
+        android:label="AllFixturesFragment" />
 </navigation>

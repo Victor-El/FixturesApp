@@ -1,12 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <TextView
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@color/white"
+       app:elevation="0dp">
+
+       <androidx.appcompat.widget.Toolbar
+           android:layout_width="match_parent"
+           android:layout_height="?android:attr/actionBarSize"
+           android:background="@color/white"
+           android:elevation="0dp">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Fixtures"
+               android:textSize="30sp"
+               android:textColor="@color/black"
+               android:textStyle="bold"/>
+
+       </androidx.appcompat.widget.Toolbar>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:padding="16dp">
+
+           <com.google.android.material.card.MaterialCardView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:contentPadding="16dp"
+               android:layout_margin="4dp"
+               android:clickable="true"
+               android:focusable="true"
+               android:foreground="?android:attr/selectableItemBackground"
+               app:shapeAppearanceOverlay="@style/manage_agent_shape_overlay">
+
+               <TextView
+                   android:id="@+id/view_all"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="View All Leagues"
+                   android:textSize="26sp"
+                   android:drawableEnd="@drawable/ic_round_arrow_forward" />
+
+           </com.google.android.material.card.MaterialCardView>
+
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Competitions"
+               android:textSize="22sp"
+               android:textStyle="bold"
+               android:layout_marginTop="32dp"/>
+
+       </LinearLayout>
+
+   </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/leagues_recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home"
-        android:gravity="center"/>
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_league_layout"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:visibility="gone"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+            <include layout="@layout/item_shimmer_league_layout"/>
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

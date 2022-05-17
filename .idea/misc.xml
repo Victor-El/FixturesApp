@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/activity_main.xml" value="0.1609375" />
-        <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/fragment_fixtures_home.xml" value="0.175" />
+        <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/fragment_all_fixtures.xml" value="0.175" />
+        <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/fragment_fixtures_home.xml" value="0.16891891891891891" />
+        <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/item_fixture_layout.xml" value="0.175" />
+        <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/item_league_layout.xml" value="0.175" />
+        <entry key="..\:/Users/Bopge/AndroidStudioProjects/Fixtures/app/src/main/res/layout/item_shimmer_league_layout.xml" value="0.175" />
       </map>
     </option>
   </component>
