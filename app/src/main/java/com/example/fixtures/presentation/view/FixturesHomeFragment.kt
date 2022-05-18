@@ -27,7 +27,9 @@ class FixturesHomeFragment: Fragment(R.layout.fragment_fixtures_home) {
         super.onViewCreated(view, savedInstanceState)
         viewBinding = FragmentFixturesHomeBinding.bind(view)
 
-        adapter = CompetitionAdapter()
+        adapter = CompetitionAdapter {
+            findNavController().navigate(FixturesHomeFragmentDirections.actionFixturesHomeFragmentToAllFixturesFragment(it))
+        }
         viewBinding?.leaguesRecyclerView?.adapter = adapter
 
         viewModel.getFixtures().observe(viewLifecycleOwner) { viewData ->

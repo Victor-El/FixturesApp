@@ -10,12 +10,15 @@ import com.example.fixtures.Utils.loadUrl
 import com.example.fixtures.databinding.ItemLeagueLayoutBinding
 import com.example.fixtures.domain.models.Competition
 
-class CompetitionAdapter: ListAdapter<Competition, CompetitionAdapter.CompetitionViewHolder>(CompetitionDiffUtil) {
+class CompetitionAdapter(private val callback: (competitionId: Int) -> Unit): ListAdapter<Competition, CompetitionAdapter.CompetitionViewHolder>(CompetitionDiffUtil) {
 
     inner class CompetitionViewHolder(private val viewBinding: ItemLeagueLayoutBinding): RecyclerView.ViewHolder(viewBinding.root) {
 
         fun bind(competition: Competition) {
             viewBinding.let {
+                it.root.setOnClickListener {
+                    callback(competition.id)
+                }
                 it.competitionImage.loadUrl(competition.area.ensignUrl)
                 it.competitionName.text = competition.name
             }

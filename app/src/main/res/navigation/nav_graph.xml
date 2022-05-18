@@ -15,5 +15,10 @@
     <fragment
         android:id="@+id/allFixturesFragment"
         android:name="com.example.fixtures.presentation.view.AllFixturesFragment"
-        android:label="AllFixturesFragment" />
+        android:label="All Fixtures" >
+        <argument
+            android:name="competitionId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
 </navigation>
