@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.fixtures.R
 import com.example.fixtures.databinding.FragmentFixturesHomeBinding
 import com.example.fixtures.presentation.adapters.CompetitionAdapter
@@ -31,6 +32,11 @@ class FixturesHomeFragment: Fragment(R.layout.fragment_fixtures_home) {
 
         viewModel.getFixtures().observe(viewLifecycleOwner) { viewData ->
             viewBinding?.let {
+
+                it.viewAll.setOnClickListener {
+                    findNavController().navigate(FixturesHomeFragmentDirections.actionFixturesHomeFragmentToAllFixturesFragment())
+                }
+
                 if (viewData.data == null) {
                     if (viewData.errMsg != null) {
                         it.shimmer.isVisible = false

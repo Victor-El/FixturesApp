@@ -48,7 +48,7 @@
                    android:id="@+id/view_all"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
-                   android:text="View All Leagues"
+                   android:text="View All Fixtures"
                    android:textSize="26sp"
                    android:drawableEnd="@drawable/ic_round_arrow_forward" />
 

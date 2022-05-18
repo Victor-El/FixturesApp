@@ -18,7 +18,7 @@
         <TextView
             android:id="@+id/match"
             android:text="Premier league - Matchday 5"
-            android:textSize="24sp"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,59 +39,67 @@
 
        <LinearLayout
            android:id="@+id/home_team"
-           android:layout_width="wrap_content"
+           android:layout_width="0dp"
            android:layout_height="wrap_content"
            android:orientation="vertical"
            android:gravity="center_horizontal"
-           android:layout_marginTop="8dp"
-           android:layout_marginBottom="48dp"
+           android:layout_marginTop="16dp"
+           android:layout_marginBottom="16dp"
+           android:layout_marginEnd="8dp"
+           app:layout_constraintEnd_toStartOf="@id/vs"
            app:layout_constraintStart_toStartOf="parent"
            app:layout_constraintTop_toBottomOf="@id/match"
-           app:layout_constraintBottom_toTopOf="time">
+           app:layout_constraintBottom_toTopOf="@id/time">
 
-           <com.google.android.material.imageview.ShapeableImageView
+           <!--<com.google.android.material.imageview.ShapeableImageView
                android:id="@+id/team_image"
                android:layout_width="100dp"
                android:layout_height="100dp"
                android:scaleType="centerCrop"
                android:background="@android:color/darker_gray"
-               app:shapeAppearanceOverlay="@style/circle_profile_image"/>
+               app:shapeAppearanceOverlay="@style/circle_profile_image"/>-->
 
            <TextView
                android:id="@+id/team_name"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Chelsea"
-               android:textSize="24sp"/>
+               android:maxLines="1"
+               android:ellipsize="end"
+               android:textSize="22sp"/>
 
        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/away_team"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:gravity="center_horizontal"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/vs"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/match"
-            app:layout_constraintBottom_toTopOf="time">
+            app:layout_constraintBottom_toTopOf="@id/time">
 
-            <com.google.android.material.imageview.ShapeableImageView
+            <!--<com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/away_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
                 android:background="@android:color/darker_gray"
-                app:shapeAppearanceOverlay="@style/circle_profile_image"/>
+                app:shapeAppearanceOverlay="@style/circle_profile_image"/>-->
 
             <TextView
                 android:id="@+id/away_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Real Madrid"
-                android:textSize="24sp"/>
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="22sp"/>
 
         </LinearLayout>
 

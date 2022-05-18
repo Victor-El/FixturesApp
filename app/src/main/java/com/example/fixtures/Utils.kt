@@ -4,6 +4,7 @@ import android.widget.ImageView
 import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.request.ImageRequest
+import coil.size.Scale
 
 object Utils {
     fun ImageView.loadUrl(url: String?) {
@@ -17,6 +18,7 @@ object Utils {
             .crossfade(500)
             .data(url)
             .target(this)
+            .scale(Scale.FILL)
             .build()
 
         imageLoader.enqueue(request)
